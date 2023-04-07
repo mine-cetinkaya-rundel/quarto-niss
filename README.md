@@ -4,10 +4,10 @@ Materials for the NISS GSN Quarto workshop (2023-04-07)
 
 ## Setup notes
 
-R 4.2.2 (2022-10-31) -- "Innocent and Trusting"
-RStudio 2023.03.0+386 "Cherry Blossom"
-Quarto 1.3.287
-Packages: tidyverse, palmerpenguins, gt
+- R 4.2.3 (2023-03-15) -- "Shortstop Beagle"
+- RStudio 2023.03.0+386 "Cherry Blossom"
+- Quarto 1.3.310
+- Packages: tidyverse, palmerpenguins, gt
 
 ## Demo
 
