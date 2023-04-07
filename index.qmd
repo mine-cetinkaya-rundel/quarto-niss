@@ -1,12 +1,13 @@
 ---
 title: "Hello, Penguins!"
+author: "Mine Çetinkaya-Rundel"
 format: html
 editor: visual
 ---
 
 ## Data
 
-For this analysis we'll use the penguins dataset from the palmerpenguins package.
+For this analysis we'll use the penguins dataset from the [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) package.
 
 ```{r}
 #| label: load-packages
