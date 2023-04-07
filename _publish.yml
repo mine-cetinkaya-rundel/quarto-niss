@@ -1,0 +1,4 @@
+- source: project
+  quarto-pub:
+    - id: da6de71f-618a-4610-8064-f9fadc512cdb
+      url: 'https://mine.quarto.pub/hello-quarto-niss'

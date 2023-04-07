@@ -1,13 +1,31 @@
 ---
 title: "Hello, Penguins!"
 author: "Mine Çetinkaya-Rundel"
-format: html
+format: revealjs
 editor: visual
+bibliography: references.bib
+inc
+execute: 
+  echo: true
 ---
+
+# Introduction
 
 ## Data
 
-For this analysis we'll use the penguins dataset from the [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) package.
+$$
+\hat{y} = \beta_0 + \beta_1 x
+$$
+
+::: columns
+::: {.column width="50%"}
+For this analysis we'll $\bar{x}$ use the `penguins` dataset from the [palmerpenguins](https://allisonhorst.github.io/palmerpenguins/) package.[@gorman2014]
+:::
+
+::: {.column width="50%"}
+![](images/logo.png)
+:::
+:::
 
 ```{r}
 #| label: load-packages
@@ -21,12 +39,21 @@ library(gt)
 
 ## Species
 
-The figure below is a bar plot of species of penguins.
+@fig-bill-dims-species is a bar plot of species of penguins.
 
 ```{r}
-#| label: bill-dims-species
+#| label: fig-bill-dims-species
 #| fig-width: 5
 #| fig-asp: 0.618
+#| fig-alt: |
+#|   A scatterplot of bill depth vs. length of three species 
+#|   of penguins showing a positive, linear relationship.
+#| fig-cap: |
+#|   Scatterplot of bill depth vs. length of three species 
+#|   of penguins showing a positive, linear relationship.
+#| output-location: slide
+#| code-line-numbers: "|3-6|10"
+#| layout-ncol: 2
 
 ggplot(
   penguins,
@@ -38,18 +65,40 @@ ggplot(
   geom_point() +
   theme_minimal() +
   scale_color_colorblind() +
+  labs(x = "Bill length (mm)", y = "Bill depth (mm)",
+       title = "REaaaaaaaaalllllllllllllllllllyyyyyyyyyyy loooooooooong title")
+
+ggplot(
+  penguins,
+  aes(
+    x = bill_length_mm, y = body_mass_g,
+    color = species, shape = species
+  )
+) +
+  geom_point() +
+  theme_minimal() +
+  scale_color_colorblind() +
   labs(x = "Bill length (mm)", y = "Bill depth (mm)")
 ```
 
 ## Penguins
 
-The table below shows the first 10 penguins from the dataset.
+@tbl-penguins-top10 shows the first 10 penguins from the dataset.
 
 ```{r}
-#| label: penguins-top10
+#| label: tbl-penguins-top10
+#| tbl-cap: First 10 rows of the penguins data frame.
 
 penguins |>
   slice_head(n = 10) |>
   select(species, island, bill_length_mm, bill_depth_mm) |>
   gt()
 ```
+
+# Analysis
+
+## Modeling results
+
+....
+
+## References
